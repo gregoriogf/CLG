@@ -32,7 +32,11 @@ namespace CLG
             do
             {
                 OutputWriter.Output(game);
-                keyinfo = Convert.ToChar(Console.ReadKey(true).Key);
+                ConsoleKeyInfo c = Console.ReadKey(true);
+                keyinfo = c.KeyChar;
+
+                if(keyinfo == '\0') { keyinfo = KeyConvert(c.Key); }
+
                 hit = (keyinfo == game[0].KeyId);
                 if (hit)
                 {
@@ -44,6 +48,17 @@ namespace CLG
             watch.Stop();
             int elapseds = Convert.ToInt32(watch.ElapsedMilliseconds / 1000);
             Console.WriteLine(string.Format("{0} got {1} points in {2} seconds.", Config.Name, Score.Standard(combo, elapseds), elapseds));
+        }
+
+        private char KeyConvert(ConsoleKey key)
+        {
+            switch (key)
+            {
+                case ConsoleKey.Oem7:
+                    return '´';
+                default:
+                    throw new Exception(string.Format("Key {0} not implemented", key));
+            }
         }
     }
     class OutputWriter

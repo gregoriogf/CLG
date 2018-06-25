@@ -136,7 +136,7 @@ namespace CLG
             Rows.TrailingComment.Text = "How much rows will the game load.";
             Rows.TrailingComment.LeftIndentation = Indentation;
             //
-            IniKey Columns = Settings.Keys.Add("Columns", "9");
+            IniKey Columns = Settings.Keys.Add("Columns", "4");
             Columns.LeftIndentation = Indentation;
             Columns.TrailingComment.Text = "How much keys do you wanna use.(1-9)";
             Columns.TrailingComment.LeftIndentation = Indentation;
@@ -155,31 +155,31 @@ namespace CLG
             IniSection Keys = file.Sections.Add("Keys");
             Keys.TrailingComment.Text = "Do I really need to comment this?";
             //
-            IniKey K1 = Keys.Keys.Add("K1", "A");
+            IniKey K1 = Keys.Keys.Add("K1", "a");
             K1.LeftIndentation = Indentation;
             //
-            IniKey K2 = Keys.Keys.Add("K2", "S");
+            IniKey K2 = Keys.Keys.Add("K2", "s");
             K2.LeftIndentation = Indentation;
             //
-            IniKey K3 = Keys.Keys.Add("K3", "D");
+            IniKey K3 = Keys.Keys.Add("K3", "d");
             K3.LeftIndentation = Indentation;
             //
-            IniKey K4 = Keys.Keys.Add("K4", "F");
+            IniKey K4 = Keys.Keys.Add("K4", "f");
             K4.LeftIndentation = Indentation;
             //
             IniKey K5 = Keys.Keys.Add("K5", " ");
             K5.LeftIndentation = Indentation;
             //
-            IniKey K6 = Keys.Keys.Add("K6", "H");
+            IniKey K6 = Keys.Keys.Add("K6", "j");
             K6.LeftIndentation = Indentation;
             //
-            IniKey K7 = Keys.Keys.Add("K7", "J");
+            IniKey K7 = Keys.Keys.Add("K7", "k");
             K7.LeftIndentation = Indentation;
             //
-            IniKey K8 = Keys.Keys.Add("K8", "K");
+            IniKey K8 = Keys.Keys.Add("K8", "l");
             K8.LeftIndentation = Indentation;
             //
-            IniKey K9 = Keys.Keys.Add("K9", "L");
+            IniKey K9 = Keys.Keys.Add("K9", "´");
             K9.LeftIndentation = Indentation;
 
             // Save file.
